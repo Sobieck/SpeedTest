@@ -23,6 +23,7 @@ namespace SpeedTest
             var sw = Stopwatch.StartNew();
 
             ulong count = 0;
+
             var timeInMillisecondsToRun = 300000; //300000;
 
             Console.Write("Run: 0 times");

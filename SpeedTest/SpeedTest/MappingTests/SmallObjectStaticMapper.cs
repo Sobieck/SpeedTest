@@ -1,18 +1,10 @@
-﻿using RandomTestValues;
-using SpeedTest.TestObjects;
+﻿using SpeedTest.TestObjects;
 using SpeedTest.TestObjects.DTO;
 
 namespace SpeedTest.MappingTests
 {
-    public class SmallObjectStaticMapper : Base
+    public class SmallObjectStaticMapper : SmallObjectBase
     {
-        private TestObject2 testObject;
-
-        public SmallObjectStaticMapper()
-        {
-            testObject = RandomValue.Object<TestObject2>();
-        }
-
         public override void Act()
         {
             var result = testObject.ToDto();

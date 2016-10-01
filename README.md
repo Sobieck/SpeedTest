@@ -5,3 +5,4 @@ A Project for easily testing the speed of various libraries.
 |------------------|-------------------|--------------|----------------------------------:|---------------------------------:|
 |Saturday, October 1, 2016|5:41:49 PM|(1) SmallObjectAutoMapper|28,698,525|0.01045|
 |Saturday, October 1, 2016|5:49:53 PM|(2) SmallObjectStaticMapper|33,151,007|0.00905|
+|Saturday, October 1, 2016|9:35:53 PM|(3) SmallNewtonSoft|18,734,535|0.01601|

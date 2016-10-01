@@ -37,6 +37,10 @@
       <HintPath>..\packages\AutoMapper.5.1.1\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="RandomTestValues, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RandomTestValues.1.0.6\lib\RandomTestValues.dll</HintPath>
       <Private>True</Private>
@@ -54,6 +58,8 @@
     <Compile Include="MappingTests\SmallObjectAutoMapper.cs" />
     <Compile Include="MappingTests\SmallObjectStaticMapper.cs" />
     <Compile Include="RegisterOfTypes.cs" />
+    <Compile Include="Serialization\SmallNewtonSoft.cs" />
+    <Compile Include="SmallObjectBase.cs" />
     <Compile Include="TestObjects\DTO\TestObject2Dto.cs" />
     <Compile Include="TestObjects\NullableTestObject.cs" />
     <Compile Include="Program.cs" />
