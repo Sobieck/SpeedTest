@@ -6,7 +6,6 @@ namespace SpeedTest.MappingTests
 {
     public class SmallObjectAutoMapper : SmallObjectBase
     {
-
         public SmallObjectAutoMapper()
         {
             Mapper.Initialize(x => x.CreateMap<TestObject2, TestObject2Dto>());

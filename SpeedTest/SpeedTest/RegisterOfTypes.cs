@@ -1,17 +1,31 @@
-﻿using SpeedTest.MappingTests;
-using SpeedTest.Serialization;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Reflection;
+using System.Linq;
+using System;
 
 namespace SpeedTest
 {
-    public static class RegisterOfTypes
+    public class RegisterOfTypes
     {
-        private static Dictionary<string, Base> dictoraryOfTypes = 
-            new Dictionary<string, Base> {
-                { "(1) SmallObjectAutoMapper", new SmallObjectAutoMapper() },
-                { "(2) SmallObjectStaticMapper", new SmallObjectStaticMapper() },
-                { "(3) SmallNewtonSoft", new SmallNewtonSoft() }
-            };
+        private static Dictionary<string, Base> dictoraryOfTypes = new Dictionary<string, Base>();
+
+        public RegisterOfTypes()
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+
+            var types = assembly.GetTypes();
+
+            foreach (var type in types)
+            {
+                if(type.IsSubclassOf(typeof(Base)) && !type.IsAbstract)
+                {
+                    var countOfDictionary = dictoraryOfTypes.Count();
+                    var typeName = string.Format("({0}) {1}", countOfDictionary, type.Name);
+
+                    dictoraryOfTypes.Add(typeName, (Base)Activator.CreateInstance(type));
+                }
+            }
+        }
 
         public static Dictionary<string, Base> DictoraryOfTypes
         {

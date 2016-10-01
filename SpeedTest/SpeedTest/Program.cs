@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Linq;
 using System.IO;
+using SpeedTest;
 
 namespace SpeedTest
 {
@@ -10,6 +11,8 @@ namespace SpeedTest
         static void Main(string[] args)
         {
             Console.WriteLine("Please select the number from the following list of possible tests:");
+
+            var registryOfTypes = new RegisterOfTypes();
 
             foreach (var item in RegisterOfTypes.DictoraryOfTypes)
             {

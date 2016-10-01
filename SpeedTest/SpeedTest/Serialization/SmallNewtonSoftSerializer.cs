@@ -3,7 +3,7 @@ using SpeedTest.TestObjects;
 
 namespace SpeedTest.Serialization
 {
-    public class SmallNewtonSoft : SmallObjectBase
+    public class SmallNewtonSoftSerializer : SmallObjectBase
     {
         public override void Act()
         {
