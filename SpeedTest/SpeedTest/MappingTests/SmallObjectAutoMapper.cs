@@ -3,7 +3,7 @@ using RandomTestValues;
 using SpeedTest.TestObjects;
 using SpeedTest.TestObjects.DTO;
 
-namespace SpeedTest
+namespace SpeedTest.MappingTests
 {
     public class SmallObjectAutoMapper : Base
     {

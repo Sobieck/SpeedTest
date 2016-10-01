@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
+using System.IO;
 
 namespace SpeedTest
 {
@@ -21,17 +22,29 @@ namespace SpeedTest
 
             var sw = Stopwatch.StartNew();
 
-            var count = 0;
+            ulong count = 0;
+            var timeInMillisecondsToRun = 300000; //300000;
 
             Console.Write("Run: 0 times");
-            while(sw.Elapsed.Seconds < 5)
+            while(sw.Elapsed.Milliseconds < timeInMillisecondsToRun)
             {
                 dictonaryItemToActOn.Value.Act();
                 count++;
-                Console.Write("\rRun: {0} times", count);
+                Console.Write("\rRun: {0} times | MS Left {1}", count, timeInMillisecondsToRun - sw.Elapsed.Milliseconds);
             }
 
-            
+            var utcTimeRan = DateTime.UtcNow;
+            var date = utcTimeRan.ToLongDateString();
+            var time = utcTimeRan.ToLongTimeString();
+
+            var averageTime = timeInMillisecondsToRun / (float)count;
+
+            var lineToWrite = string.Format("|{0}|{1}|{2}|{3:N0}|{4:N5}|", date, time, dictonaryItemToActOn.Key, count, averageTime);
+
+            using(var file = new StreamWriter(@"C:\GitHub\SpeedTest\README.md", true))
+            {
+                file.WriteLine(lineToWrite);
+            }
         }
     }
 }

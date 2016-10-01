@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MappingTests\SmallObjectAutoMapper.cs" />
+    <Compile Include="MappingTests\SmallObjectStaticMapper.cs" />
     <Compile Include="RegisterOfTypes.cs" />
     <Compile Include="TestObjects\DTO\TestObject2Dto.cs" />
     <Compile Include="TestObjects\NullableTestObject.cs" />
