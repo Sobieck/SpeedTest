@@ -26,11 +26,11 @@ namespace SpeedTest
             var timeInMillisecondsToRun = 300000; //300000;
 
             Console.Write("Run: 0 times");
-            while(sw.Elapsed.Milliseconds < timeInMillisecondsToRun)
+            while(sw.Elapsed.TotalMilliseconds < timeInMillisecondsToRun)
             {
                 dictonaryItemToActOn.Value.Act();
                 count++;
-                Console.Write("\rRun: {0} times | MS Left {1}", count, timeInMillisecondsToRun - sw.Elapsed.Milliseconds);
+                Console.Write("\rRun: {0} times | MS Left {1:N0}", count, timeInMillisecondsToRun - sw.Elapsed.TotalMilliseconds);
             }
 
             var utcTimeRan = DateTime.UtcNow;
