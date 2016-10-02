@@ -58,6 +58,8 @@
     <Compile Include="AbstractClasses\LargeObjectBase.cs" />
     <Compile Include="LargeObjectMapping\LargeObjectAutoMapper.cs" />
     <Compile Include="LargeObjectMapping\LargeObjectMappingBase.cs" />
+    <Compile Include="LargeObjectSerialization\LargeNewtonSoftSerializer.cs" />
+    <Compile Include="LargeObjectSerialization\LargeObjectSerializationBase.cs" />
     <Compile Include="SmallObjectMapping\SmallObjectAutoMapper.cs" />
     <Compile Include="SmallObjectMapping\SmallObjectMapInClass.cs" />
     <Compile Include="SmallObjectMapping\SmallObjectMappingBase.cs" />

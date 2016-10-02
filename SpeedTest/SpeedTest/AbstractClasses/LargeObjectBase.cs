@@ -1,5 +1,4 @@
-﻿using RandomTestValues;
-using SpeedTest.TestObjects;
+﻿using SpeedTest.TestObjects;
 
 namespace SpeedTest.AbstractClasses
 {
