@@ -73,7 +73,6 @@
     <Compile Include="TestObjects\TestObject.cs" />
     <Compile Include="TestObjects\TestObject2.cs" />
     <Compile Include="TestObjects\TestObjectWithConstructor.cs" />
-    <Compile Include="TypesOfTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
