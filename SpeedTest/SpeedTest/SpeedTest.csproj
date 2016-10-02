@@ -56,7 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MappingTests\SmallObjectAutoMapper.cs" />
+    <Compile Include="MappingTests\SmallObjectMapInClass.cs" />
     <Compile Include="MappingTests\SmallObjectStaticMapper.cs" />
+    <Compile Include="NonBlockingConsole.cs" />
     <Compile Include="RegisterOfTypes.cs" />
     <Compile Include="Serialization\SmallNewtonSoftSerializer.cs" />
     <Compile Include="AbstractClasses\SmallObjectBase.cs" />

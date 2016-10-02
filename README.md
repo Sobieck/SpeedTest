@@ -10,3 +10,4 @@ A Project for easily testing the speed of various libraries.
 |Sunday, October 2, 2016|2:15:37 PM|(2) SmallObjectStaticMapper|1,352,630,731|0.00022|
 |Sunday, October 2, 2016|2:25:15 PM|(2) SmallObjectStaticMapper|1,456,181,861|0.00021|
 |Sunday, October 2, 2016|2:37:42 PM|(2) SmallObjectStaticMapper|3,170,566,489|0.00009|
+|Sunday, October 2, 2016|2:47:53 PM|(1) SmallObjectAutoMapper|1,036,444,924|0.00029|
