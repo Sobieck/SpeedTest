@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.Linq;
 using System.IO;
 using System.Threading.Tasks;
-using System.Collections.Concurrent;
 
 namespace SpeedTest
 {
@@ -24,15 +23,14 @@ namespace SpeedTest
 
             var dictonaryItemToActOn = RegisterOfTypes.DictoraryOfTypes.First(x => x.Key.Contains(selection));
 
-            var sw = Stopwatch.StartNew();
-
             ulong count = 0;
 
             var timeInMillisecondsToRun = 300000; //300000;
 
             NonBlockingConsole.TimeInMillisecondsToRun = timeInMillisecondsToRun;
 
-            Console.Write("Run: 0 times");
+            var sw = Stopwatch.StartNew();
+
             while (sw.Elapsed.TotalMilliseconds < timeInMillisecondsToRun)
             {
                 dictonaryItemToActOn.Value.Act();
@@ -69,7 +67,7 @@ namespace SpeedTest
                 {
                     while (true)
                     {
-                        var output = string.Format("\rRun: {0} times | MS Left {1:N0}", Iterations, TimeInMillisecondsToRun - MillisecondsElapsed);
+                        var output = string.Format("\rRun: {0:N0} times | MS Left {1:N0}", Iterations, TimeInMillisecondsToRun - MillisecondsElapsed);
                         Console.Out.WriteAsync(output);
                     }
                 });

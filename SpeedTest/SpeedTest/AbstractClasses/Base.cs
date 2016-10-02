@@ -1,4 +1,4 @@
-﻿namespace SpeedTest
+﻿namespace SpeedTest.AbstractClasses
 {
     public abstract class Base
     {

@@ -1,4 +1,5 @@
-﻿using SpeedTest.TestObjects;
+﻿using SpeedTest.AbstractClasses;
+using SpeedTest.TestObjects;
 using SpeedTest.TestObjects.DTO;
 
 namespace SpeedTest.MappingTests

@@ -1,7 +1,7 @@
 ﻿using RandomTestValues;
 using SpeedTest.TestObjects;
 
-namespace SpeedTest
+namespace SpeedTest.AbstractClasses
 {
     public abstract class SmallObjectBase : Base
     {

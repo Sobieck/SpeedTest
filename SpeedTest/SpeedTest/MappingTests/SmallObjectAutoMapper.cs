@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using SpeedTest.AbstractClasses;
 using SpeedTest.TestObjects;
 using SpeedTest.TestObjects.DTO;
 

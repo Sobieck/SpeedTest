@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SpeedTest.AbstractClasses;
 using SpeedTest.TestObjects;
 
 namespace SpeedTest.Serialization
