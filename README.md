@@ -8,3 +8,4 @@ A Project for easily testing the speed of various libraries.
 |Saturday, October 1, 2016|9:35:53 PM|(3) SmallNewtonSoft|18,734,535|0.01601|
 |Saturday, October 1, 2016|10:29:29 PM|(0) SmallNewtonSoftSerializer|19,181,952|0.01564|
 |Sunday, October 2, 2016|2:15:37 PM|(2) SmallObjectStaticMapper|1,352,630,731|0.00022|
+|Sunday, October 2, 2016|2:25:15 PM|(2) SmallObjectStaticMapper|1,456,181,861|0.00021|

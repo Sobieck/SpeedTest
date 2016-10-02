@@ -30,14 +30,17 @@ namespace SpeedTest
 
             var timeInMillisecondsToRun = 300000; //300000;
 
+            NonBlockingConsole.TimeInMillisecondsToRun = timeInMillisecondsToRun;
+
             Console.Write("Run: 0 times");
-            while(sw.Elapsed.TotalMilliseconds < timeInMillisecondsToRun)
+            while (sw.Elapsed.TotalMilliseconds < timeInMillisecondsToRun)
             {
                 dictonaryItemToActOn.Value.Act();
                 count++;
-                NonBlockingConsole.Write(new NonBlockingConsoleInput(count, sw.Elapsed.TotalMilliseconds, timeInMillisecondsToRun));
+                NonBlockingConsole.Iterations = count;
+                NonBlockingConsole.MillisecondsElapsed = sw.Elapsed.TotalMilliseconds;
             }
-            
+
             var utcTimeRan = DateTime.UtcNow;
             var date = utcTimeRan.ToLongDateString();
             var time = utcTimeRan.ToLongTimeString();
@@ -52,23 +55,13 @@ namespace SpeedTest
             }
         }
 
-        public class NonBlockingConsoleInput
-        {
-            public NonBlockingConsoleInput(ulong count, double millisecondsElapsed, int timeInMillisecondsToRun)
-            {
-                Count = count;
-                MillisecondsElapsed = millisecondsElapsed;
-                TimeInMillisecondsToRun = timeInMillisecondsToRun;
-             }
-
-            public ulong Count { get; private set; }
-            public double MillisecondsElapsed { get; private set; }
-            public int TimeInMillisecondsToRun { get; private set; }
-        }
-
         public static class NonBlockingConsole
         {
-            private static NonBlockingConsoleInput ItemToWrite { get; set; }
+            public static ulong Iterations { private get; set; }
+
+            public static int TimeInMillisecondsToRun { private get; set; }
+
+            public static double MillisecondsElapsed { private get; set; }
 
             static NonBlockingConsole()
             {
@@ -76,15 +69,10 @@ namespace SpeedTest
                 {
                     while (true)
                     {
-                        var output = string.Format("\rRun: {0} times | MS Left {1:N0}", ItemToWrite.Count, ItemToWrite.TimeInMillisecondsToRun - ItemToWrite.MillisecondsElapsed);
+                        var output = string.Format("\rRun: {0} times | MS Left {1:N0}", Iterations, TimeInMillisecondsToRun - MillisecondsElapsed);
                         Console.Out.WriteAsync(output);
                     }
                 });
-            }
-
-            public static void Write(NonBlockingConsoleInput itemToWrite)
-            {
-                ItemToWrite = itemToWrite;
             }
         }
     }
