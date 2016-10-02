@@ -3,6 +3,9 @@ using System.Reflection;
 using System.Linq;
 using System;
 using SpeedTest.AbstractClasses;
+using AutoMapper;
+using SpeedTest.TestObjects.DTO;
+using SpeedTest.TestObjects;
 
 namespace SpeedTest
 {
@@ -28,6 +31,8 @@ namespace SpeedTest
             }
 
             dictoraryOfTypes.OrderBy(x => x.Value.TypeOfTest);
+
+            
         }
 
         public static Dictionary<string, Base> DictoraryOfTypes
@@ -37,5 +42,7 @@ namespace SpeedTest
                 return dictoraryOfTypes;
             }
         }
+
+
     }
 }

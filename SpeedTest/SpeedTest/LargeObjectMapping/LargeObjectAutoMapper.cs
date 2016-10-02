@@ -7,9 +7,10 @@ namespace SpeedTest.LargeObjectMapping
 {
     public class LargeObjectAutoMapper : LargeObjectMappingBase
     {
+
         public LargeObjectAutoMapper()
         {
-            Mapper.Initialize(x => x.CreateMap<TestObject, TestObjectDto>());
+            Mapper.Initialize(x => x.AddProfile<ProfileForAutoMapper>());
         }
 
         public override ILargeObject TestableAct()

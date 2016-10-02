@@ -9,7 +9,7 @@ namespace SpeedTest.SmallObjectMapping
     {
         public SmallObjectAutoMapper()
         {
-            Mapper.Initialize(x => x.CreateMap<Employee, EmployeeDto>());
+            Mapper.Initialize(x => x.AddProfile<ProfileForAutoMapper>());
         }
 
         public override IEmployee TestableAct()
