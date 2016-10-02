@@ -1,5 +1,4 @@
-﻿using RandomTestValues;
-using SpeedTest.TestObjects;
+﻿using SpeedTest.TestObjects;
 
 namespace SpeedTest.AbstractClasses
 {
@@ -7,7 +6,7 @@ namespace SpeedTest.AbstractClasses
     {
         public SmallObjectBase()
         {
-            testObject = RandomValue.Object<TestObject2>();
+            testObject = UniformTestObjects.SmallObject;
         }
 
         protected TestObject2 testObject { get; private set; }

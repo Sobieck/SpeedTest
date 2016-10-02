@@ -67,6 +67,7 @@
     <Compile Include="SmallObjectSerialization\SmallNewtonSoftSerializer.cs" />
     <Compile Include="AbstractClasses\SmallObjectBase.cs" />
     <Compile Include="SmallObjectSerialization\SmallObjectSerializationBase.cs" />
+    <Compile Include="UniformTestObjects.cs" />
     <Compile Include="TestObjects\DTO\TestObject2Dto.cs" />
     <Compile Include="TestObjects\DTO\TestObjectDto.cs" />
     <Compile Include="TestObjects\NullableTestObject.cs" />

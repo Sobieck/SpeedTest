@@ -7,7 +7,7 @@ namespace SpeedTest.AbstractClasses
     {
         public LargeObjectBase()
         {
-            testObject = RandomValue.Object<TestObject>();
+            testObject = UniformTestObjects.LargeObject;
         }
 
         protected TestObject testObject { get; private set; }
