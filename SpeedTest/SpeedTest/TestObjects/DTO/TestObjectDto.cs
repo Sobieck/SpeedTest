@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace SpeedTest.TestObjects
+namespace SpeedTest.TestObjects.DTO
 {
-    public class TestObject
+    public class TestObjectDto
     {
         public int RInt { get; set; }
         public string RString { get; set; }

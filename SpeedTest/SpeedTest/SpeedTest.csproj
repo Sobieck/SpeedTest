@@ -55,6 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractClasses\LargeObjectBase.cs" />
+    <Compile Include="LargeObjectMapping\LargeObjectAutoMapper.cs" />
+    <Compile Include="LargeObjectMapping\LargeObjectMappingBase.cs" />
     <Compile Include="SmallObjectMapping\SmallObjectAutoMapper.cs" />
     <Compile Include="SmallObjectMapping\SmallObjectMapInClass.cs" />
     <Compile Include="SmallObjectMapping\SmallObjectMappingBase.cs" />
@@ -65,6 +68,7 @@
     <Compile Include="AbstractClasses\SmallObjectBase.cs" />
     <Compile Include="SmallObjectSerialization\SmallObjectSerializationBase.cs" />
     <Compile Include="TestObjects\DTO\TestObject2Dto.cs" />
+    <Compile Include="TestObjects\DTO\TestObjectDto.cs" />
     <Compile Include="TestObjects\NullableTestObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +82,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
