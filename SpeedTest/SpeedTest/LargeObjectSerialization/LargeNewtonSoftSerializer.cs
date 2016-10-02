@@ -1,14 +1,15 @@
 ﻿using Newtonsoft.Json;
+using SpeedTest.Interfaces;
 using SpeedTest.TestObjects;
 
 namespace SpeedTest.LargeObjectSerialization
 {
     public class LargeNewtonSoftSerializer : LargeObjectSerializationBase
     {
-        public override void Act()
+        public override ILargeObject TestableAct()
         {
             var json = JsonConvert.SerializeObject(testObject);
-            var result = JsonConvert.DeserializeObject<TestObject>(json);
+            return JsonConvert.DeserializeObject<TestObject>(json);
         }
     }
 }

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using SpeedTest.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace SpeedTest.TestObjects
 {
-    public class TestObject
+    public class TestObject : ILargeObject
     {
         public int RInt { get; set; }
         public string RString { get; set; }
@@ -18,19 +19,18 @@ namespace SpeedTest.TestObjects
         public ICollection<TestEnum> REnumCollection { get; set; }
         public IList<TestEnum> REnumList { get; set; }
         public Guid RGuid { get; set; }
-        public TestObject2 TestObject2 { get; set; }
-        public TestObject2 TestObject3 { get; set; }
+        public Employee TestObject2 { get; set; }
+        public Employee TestObject3 { get; set; }
         public List<double> RList { get; set; }
         public IList<string> RList2 { get; set; }
         public Collection<int> RCollection { get; set; }
         public ICollection<bool> RCollection2 { get; set; }
-        public List<TestObject2> RTestObject2List { get; set; }
-        public ICollection<TestObject2> RTestObject2Collection { get; set; }
+        public List<Employee> RTestObject2List { get; set; }
+        public ICollection<Employee> RTestObject2Collection { get; set; }
         public DateTime RDateTime { get; set; }
         public ICollection<short> LazyShorts { get; set; }
         public ICollection<List<Collection<bool>>> CrazyBools { get; set; }
-        public string GetOnly => "Test";
         public string[] Strings { get; set; }
-        public TestObject2[] RTestObject2Array { get; set; }
+        public Employee[] RTestObject2Array { get; set; }
     }
 }

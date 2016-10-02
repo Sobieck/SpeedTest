@@ -4,6 +4,6 @@ namespace SpeedTest.SmallObjectMapping
 {
     public abstract class SmallObjectMappingBase : SmallObjectBase
     {
-        public override string TypeOfTest => "Small Object Mapping"; 
+        public override string TypeOfTest => "Small Object Mapping";
     }
 }

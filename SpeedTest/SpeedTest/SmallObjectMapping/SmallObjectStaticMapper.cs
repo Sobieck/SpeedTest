@@ -1,26 +1,27 @@
 ﻿using SpeedTest.TestObjects;
 using SpeedTest.TestObjects.DTO;
+using SpeedTest.Interfaces;
 
 namespace SpeedTest.SmallObjectMapping
 {
     public class SmallObjectStaticMapper : SmallObjectMappingBase
     {
-        public override void Act()
+        public override IEmployee TestableAct()
         {
-            var result = testObject.ToDto();
+            return testObject.ToDto();
         }
     }
 
     public static class Mappers
     {
-        public static TestObject2Dto ToDto(this TestObject2 source)
+        public static EmployeeDto ToDto(this Employee source)
         {
-            return new TestObject2Dto
+            return new EmployeeDto
             {
-                RInt2 = source.RInt2,
-                RString2 = source.RString2,
-                RDecimal2 = source.RDecimal2,
-                RDouble2 = source.RDouble2
+                EmployeeNumber = source.EmployeeNumber,
+                Name = source.Name,
+                PayPerHour = source.PayPerHour,
+                Position = source.Position
             };
         }
     }

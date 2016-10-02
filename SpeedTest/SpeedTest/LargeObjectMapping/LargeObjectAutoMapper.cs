@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using SpeedTest.TestObjects;
 using SpeedTest.TestObjects.DTO;
+using SpeedTest.Interfaces;
 
 namespace SpeedTest.LargeObjectMapping
 {
@@ -10,10 +11,10 @@ namespace SpeedTest.LargeObjectMapping
         {
             Mapper.Initialize(x => x.CreateMap<TestObject, TestObjectDto>());
         }
-        
-        public override void Act()
+
+        public override ILargeObject TestableAct()
         {
-            var mappedObject = Mapper.Map<TestObject, TestObjectDto>(testObject);
+            return Mapper.Map<TestObject, TestObjectDto>(testObject);
         }
     }
 }

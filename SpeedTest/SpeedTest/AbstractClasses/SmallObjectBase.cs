@@ -1,14 +1,22 @@
-﻿using SpeedTest.TestObjects;
+﻿using SpeedTest.Interfaces;
+using SpeedTest.TestObjects;
 
 namespace SpeedTest.AbstractClasses
 {
-    public abstract class SmallObjectBase : Base
+    public abstract class SmallObjectBase : Base, ITestableClass<IEmployee>
     {
         public SmallObjectBase()
         {
             testObject = UniformTestObjects.SmallObject;
         }
 
-        protected TestObject2 testObject { get; private set; }
+        protected Employee testObject { get; private set; }
+
+        public override void Act()
+        {
+            TestableAct();
+        }
+
+        public abstract IEmployee TestableAct();
     }
 }

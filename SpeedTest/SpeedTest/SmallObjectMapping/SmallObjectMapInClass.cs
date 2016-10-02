@@ -1,19 +1,18 @@
-﻿using System;
-using SpeedTest.AbstractClasses;
+﻿using SpeedTest.Interfaces;
 using SpeedTest.TestObjects.DTO;
 
 namespace SpeedTest.SmallObjectMapping
 {
     public class SmallObjectMapInClass : SmallObjectMappingBase
     {
-        public override void Act()
+        public override IEmployee TestableAct()
         {
-            var result = new TestObject2Dto
+            return new EmployeeDto
             {
-                RInt2 = testObject.RInt2,
-                RString2 = testObject.RString2,
-                RDecimal2 = testObject.RDecimal2,
-                RDouble2 = testObject.RDouble2
+                EmployeeNumber = testObject.EmployeeNumber,
+                Name = testObject.Name,
+                PayPerHour = testObject.PayPerHour,
+                Position = testObject.Position
             };
         }
     }

@@ -1,5 +1,6 @@
 ﻿using RandomTestValues;
 using SpeedTest.TestObjects;
+using SpeedTest.TestObjects.DTO;
 
 namespace SpeedTest
 {
@@ -7,11 +8,11 @@ namespace SpeedTest
     {
         static UniformTestObjects()
         {
-            SmallObject = RandomValue.Object<TestObject2>();
+            SmallObject = RandomValue.Object<Employee>();
             LargeObject = RandomValue.Object<TestObject>();
         }
 
         public static TestObject LargeObject { get; private set; }
-        public static TestObject2 SmallObject { get; private set; }
+        public static Employee SmallObject { get; private set; }
     }
 }

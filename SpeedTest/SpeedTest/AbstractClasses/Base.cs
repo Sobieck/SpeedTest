@@ -1,4 +1,6 @@
-﻿namespace SpeedTest.AbstractClasses
+﻿using SpeedTest.Interfaces;
+
+namespace SpeedTest.AbstractClasses
 {
     public abstract class Base
     {

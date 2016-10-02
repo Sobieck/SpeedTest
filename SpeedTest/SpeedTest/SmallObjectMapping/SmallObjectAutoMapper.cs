@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using SpeedTest.Interfaces;
 using SpeedTest.TestObjects;
 using SpeedTest.TestObjects.DTO;
 
@@ -8,12 +9,12 @@ namespace SpeedTest.SmallObjectMapping
     {
         public SmallObjectAutoMapper()
         {
-            Mapper.Initialize(x => x.CreateMap<TestObject2, TestObject2Dto>());
+            Mapper.Initialize(x => x.CreateMap<Employee, EmployeeDto>());
         }
 
-        public override void Act()
+        public override IEmployee TestableAct()
         {
-            var result = Mapper.Map<TestObject2, TestObject2Dto>(testObject);
+            return Mapper.Map<Employee, EmployeeDto>(testObject);
         }
     }
 }
