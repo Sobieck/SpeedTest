@@ -26,6 +26,8 @@ namespace SpeedTest
                     dictoraryOfTypes.Add(typeName, (Base)Activator.CreateInstance(type));
                 }
             }
+
+            dictoraryOfTypes.OrderBy(x => x.Value.TypeOfTest);
         }
 
         public static Dictionary<string, Base> DictoraryOfTypes

@@ -1,10 +1,9 @@
 ﻿using Newtonsoft.Json;
-using SpeedTest.AbstractClasses;
 using SpeedTest.TestObjects;
 
-namespace SpeedTest.Serialization
+namespace SpeedTest.SmallObjectSerialization
 {
-    public class SmallNewtonSoftSerializer : SmallObjectBase
+    public class SmallNewtonSoftSerializer : SmallObjectSerializationBase
     {
         public override void Act()
         {

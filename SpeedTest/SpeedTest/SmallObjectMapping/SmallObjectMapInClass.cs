@@ -1,9 +1,10 @@
-﻿using SpeedTest.AbstractClasses;
+﻿using System;
+using SpeedTest.AbstractClasses;
 using SpeedTest.TestObjects.DTO;
 
-namespace SpeedTest.MappingTests
+namespace SpeedTest.SmallObjectMapping
 {
-    public class SmallObjectMapInClass : SmallObjectBase
+    public class SmallObjectMapInClass : SmallObjectMappingBase
     {
         public override void Act()
         {

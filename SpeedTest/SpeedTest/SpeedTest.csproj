@@ -55,13 +55,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MappingTests\SmallObjectAutoMapper.cs" />
-    <Compile Include="MappingTests\SmallObjectMapInClass.cs" />
-    <Compile Include="MappingTests\SmallObjectStaticMapper.cs" />
+    <Compile Include="SmallObjectMapping\SmallObjectAutoMapper.cs" />
+    <Compile Include="SmallObjectMapping\SmallObjectMapInClass.cs" />
+    <Compile Include="SmallObjectMapping\SmallObjectMappingBase.cs" />
+    <Compile Include="SmallObjectMapping\SmallObjectStaticMapper.cs" />
     <Compile Include="NonBlockingConsole.cs" />
     <Compile Include="RegisterOfTypes.cs" />
-    <Compile Include="Serialization\SmallNewtonSoftSerializer.cs" />
+    <Compile Include="SmallObjectSerialization\SmallNewtonSoftSerializer.cs" />
     <Compile Include="AbstractClasses\SmallObjectBase.cs" />
+    <Compile Include="SmallObjectSerialization\SmallObjectSerializationBase.cs" />
     <Compile Include="TestObjects\DTO\TestObject2Dto.cs" />
     <Compile Include="TestObjects\NullableTestObject.cs" />
     <Compile Include="Program.cs" />
@@ -71,6 +73,7 @@
     <Compile Include="TestObjects\TestObject.cs" />
     <Compile Include="TestObjects\TestObject2.cs" />
     <Compile Include="TestObjects\TestObjectWithConstructor.cs" />
+    <Compile Include="TypesOfTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

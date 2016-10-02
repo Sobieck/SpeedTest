@@ -9,9 +9,10 @@ namespace SpeedTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please select the number from the following list of possible tests:");
-
             var registryOfTypes = new RegisterOfTypes();
+
+            Console.WriteLine("Please select the number from the following list of possible tests:");
+            Console.WriteLine("(a) ALL TESTS. " + RegisterOfTypes.DictoraryOfTypes.Count() * 5 + " minute running time");
 
             foreach (var item in RegisterOfTypes.DictoraryOfTypes)
             {
@@ -20,14 +21,33 @@ namespace SpeedTest
 
             var selection = Console.ReadLine();
 
+            if (selection == "a")
+            {
+                var testNumber = 0;
+                while (testNumber < RegisterOfTypes.DictoraryOfTypes.Count())
+                {
+                    RunTestScenario(testNumber.ToString());
+                    testNumber++;
+                }
+            }
+            else
+            {
+                RunTestScenario(selection);
+            }
+        }
+
+        private static void RunTestScenario(string selection)
+        {
             var dictonaryItemToActOn = RegisterOfTypes.DictoraryOfTypes.First(x => x.Key.Contains(selection));
+
+            Console.WriteLine("\nRunning:" + dictonaryItemToActOn.Key);
 
             ulong count = 0;
 
             var timeInMillisecondsToRun = 300000; //300000;
 
             NonBlockingConsole.TimeInMillisecondsToRun = timeInMillisecondsToRun;
-
+            
             var sw = Stopwatch.StartNew();
 
             while (sw.Elapsed.TotalMilliseconds < timeInMillisecondsToRun)
@@ -38,13 +58,11 @@ namespace SpeedTest
                 NonBlockingConsole.MillisecondsElapsed = sw.Elapsed.TotalMilliseconds;
             }
 
-            var utcTimeRan = DateTime.UtcNow;
-            var date = utcTimeRan.ToLongDateString();
-            var time = utcTimeRan.ToLongTimeString();
-
             var averageTime = timeInMillisecondsToRun / (float)count;
 
-            var lineToWrite = string.Format("|{0}|{1}|{2}|{3:N0}|{4:N5}|", date, time, dictonaryItemToActOn.Key, count, averageTime);
+            var binaryVersion = File.GetLastWriteTime(System.Reflection.Assembly.GetExecutingAssembly().Location).ToString("yyyy.MM.dd.HHmm");
+
+            var lineToWrite = string.Format("|{0}|{1}|{2}|{3:N0}|{4:N5}|", binaryVersion, dictonaryItemToActOn.Value.TypeOfTest, dictonaryItemToActOn.Key, count, averageTime);
 
             using (var file = new StreamWriter(@"C:\GitHub\SpeedTest\README.md", true))
             {
