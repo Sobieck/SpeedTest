@@ -6,11 +6,11 @@ using SpeedTest.AbstractClasses;
 
 namespace SpeedTest
 {
-    public class RegisterOfTypes
+    public static class RegisterOfTypes
     {
         private static Dictionary<string, Base> dictoraryOfTypes = new Dictionary<string, Base>();
 
-        public RegisterOfTypes()
+        static RegisterOfTypes()
         {
             var assembly = Assembly.GetExecutingAssembly();
 

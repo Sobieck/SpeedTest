@@ -9,8 +9,6 @@ namespace SpeedTest
     {
         static void Main(string[] args)
         {
-            var registryOfTypes = new RegisterOfTypes();
-
             Console.WriteLine("Please select the number from the following list of possible tests:");
             Console.WriteLine("(a) ALL TESTS. " + RegisterOfTypes.DictoraryOfTypes.Count() * 5 + " minute running time");
 
