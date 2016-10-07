@@ -1,14 +1,15 @@
 ﻿using SpeedTest.TestObjects;
 using SpeedTest.TestObjects.DTO;
 using SpeedTest.Interfaces;
+using System;
 
 namespace SpeedTest.SmallObjectMapping
 {
     public class SmallObjectStaticMapper : SmallObjectMappingBase
     {
-        public override IEmployee TestableAct()
+        public override T Act<T>()
         {
-            return testObject.ToDto();
+            return (T)testObject.ToDto();
         }
     }
 

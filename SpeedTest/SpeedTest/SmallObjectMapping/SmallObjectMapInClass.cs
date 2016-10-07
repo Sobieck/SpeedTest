@@ -5,7 +5,7 @@ namespace SpeedTest.SmallObjectMapping
 {
     public class SmallObjectMapInClass : SmallObjectMappingBase
     {
-        public override IEmployee TestableAct()
+        public override IEmployee Act<IEmployee>()
         {
             return new EmployeeDto
             {

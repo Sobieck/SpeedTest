@@ -11,7 +11,7 @@ namespace SpeedTest
 {
     public static class RegisterOfTypes
     {
-        private static Dictionary<string, Base> dictoraryOfTypes = new Dictionary<string, Base>();
+        private static Dictionary<string, SpeedTestBase> dictoraryOfTypes = new Dictionary<string, SpeedTestBase>();
 
         static RegisterOfTypes()
         {
@@ -21,12 +21,12 @@ namespace SpeedTest
 
             foreach (var type in types)
             {
-                if(type.IsSubclassOf(typeof(Base)) && !type.IsAbstract)
+                if(type.IsSubclassOf(typeof(SpeedTestBase)) && !type.IsAbstract)
                 {
                     var countOfDictionary = dictoraryOfTypes.Count();
                     var typeName = string.Format("({0}) {1}", countOfDictionary, type.Name);
 
-                    dictoraryOfTypes.Add(typeName, (Base)Activator.CreateInstance(type));
+                    dictoraryOfTypes.Add(typeName, (SpeedTestBase)Activator.CreateInstance(type));
                 }
             }
 
@@ -35,7 +35,7 @@ namespace SpeedTest
             
         }
 
-        public static Dictionary<string, Base> DictoraryOfTypes
+        public static Dictionary<string, SpeedTestBase> DictoraryOfTypes
         {
             get
             {

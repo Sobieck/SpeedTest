@@ -2,7 +2,7 @@
 
 namespace SpeedTest.AbstractClasses
 {
-    public abstract class Base
+    public abstract class SpeedTestBase
     {
         public abstract void Act();
 
