@@ -1,10 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SpeedTest.Interfaces;
-using SpeedTest.SmallObjectMapping;
 using SpeedTest.TestObjects;
 using System.Collections.Generic;
 using FluentAssertions;
-using SpeedTest.SmallObjectSerialization;
 
 namespace SpeedTest.UnitTests
 {
@@ -19,10 +17,10 @@ namespace SpeedTest.UnitTests
         {
             collectionOfObjectsToTest = new Dictionary<string, IEmployee>
             {
-                {"Small Object Static Mapper", new  SmallObjectStaticMapper().TestableAct()},
-                {"Small Object Map In Class", new SmallObjectMapInClass().TestableAct() },
-                {"Small Object Automapper", new SmallObjectAutoMapper().TestableAct() },
-                {"Small Object Json Serializer", new SmallNewtonSoftSerializer().TestableAct() }
+                //{"Small Object Static Mapper", new  SmallObjectStaticMapper().TestableAct()},
+                //{"Small Object Map In Class", new SmallObjectMapInClass().TestableAct() },
+                //{"Small Object Automapper", new SmallObjectAutoMapper().TestableAct() },
+                //{"Small Object Json Serializer", new SmallNewtonSoftSerializer().TestableAct() }
             };
         }
 

@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using SpeedTest.TestObjects;
 using SpeedTest.TestObjects.DTO;
-using SpeedTest.AbstractClasses;
 using SpeedTest.Interfaces;
+using SnippetSpeed;
 
 namespace SpeedTest.LargeObjectMapping
 {
-    public class LargeObjectAutoMapper : TestableSpeedTestBase<ILargeObject>   
+    public class LargeObjectAutoMapper : TestableSnippetSpeedBase<ILargeObject>   
     {
 
         public LargeObjectAutoMapper()
