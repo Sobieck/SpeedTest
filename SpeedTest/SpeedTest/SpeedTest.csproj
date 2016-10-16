@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MdResultsWriter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="SmallDeserializers\SmallNewtonSoftManualMapDeserializer.cs" />
     <Compile Include="SmallDeserializers\SmallNewtonSoftStreamDeserializer.cs" />
