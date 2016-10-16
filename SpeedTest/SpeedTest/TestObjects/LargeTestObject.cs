@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 
 namespace SpeedTest.TestObjects
 {
-    public class TestObject
+    public class LargeTestObject
     {
         public int RInt { get; set; }
         public string RString { get; set; }
