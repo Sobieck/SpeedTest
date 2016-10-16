@@ -1,8 +1,6 @@
-﻿using SpeedTest.Interfaces;
-
-namespace SpeedTest.TestObjects.DTO
+﻿namespace SpeedTest.TestObjects
 {
-    public class EmployeeDto : IEmployee
+    public class SmallTestObject
     {
         public int EmployeeNumber { get; set; }
         public string Name { get; set; }

@@ -46,7 +46,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="SnippetSpeed, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SnippetSpeed.1.0.0-ci-20161015-165024\lib\net46\SnippetSpeed.dll</HintPath>
+      <HintPath>..\packages\SnippetSpeed.1.0.0\lib\net46\SnippetSpeed.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -59,30 +59,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IEmployee.cs" />
-    <Compile Include="Interfaces\ILargeObject.cs" />
-    <Compile Include="LargeObjectMapping\LargeObjectAutoMapper.cs" />
-    <Compile Include="ProfileForAutomapper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="UniformTestObjects.cs" />
-    <Compile Include="TestObjects\DTO\EmployeeDto.cs" />
-    <Compile Include="TestObjects\DTO\TestObjectDto.cs" />
     <Compile Include="TestObjects\NullableTestObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestObjects\TestEnum.cs" />
     <Compile Include="TestObjects\TestObject.cs" />
-    <Compile Include="TestObjects\Employee.cs" />
+    <Compile Include="TestObjects\SmallTestObject.cs" />
     <Compile Include="TestObjects\TestObjectWithConstructor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="LargeObjectSerialization\" />
-    <Folder Include="SmallObjectMapping\" />
-    <Folder Include="SmallObjectSerialization\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
