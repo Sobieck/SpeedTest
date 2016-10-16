@@ -5,10 +5,10 @@ using SpeedTest.SmallDeserializers;
 using SpeedTest.SmallSerializers;
 using SpeedTest.TestObjects;
 
-namespace SpeedTest.UnitTests.SmallSerializers
+namespace SpeedTest.UnitTests
 {
     [TestClass]
-    public class SmallObjectSerializerTests
+    public class SmallSerializerTests
     {
         [TestMethod]
         public void TheSerializerShouldOutputAStringThatCanBeDeserialedInAValidObject()

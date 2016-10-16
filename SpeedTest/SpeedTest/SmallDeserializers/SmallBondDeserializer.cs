@@ -4,6 +4,8 @@ using Bond;
 using Bond.Protocols;
 using Bond.IO.Safe;
 using SpeedTest.SmallSerializers;
+using SpeedTest.BondDtos;
+using SpeedTest.Utilities;
 
 namespace SpeedTest.SmallDeserializers
 {

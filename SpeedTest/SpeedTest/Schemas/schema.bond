@@ -1,6 +1,16 @@
-﻿namespace SpeedTest
+﻿namespace SpeedTest.BondDtos
 
 using decimal = blob;
+using guid = string;
+using dateTime = int64;
+
+enum TestEnum
+{
+	More = 12300000,
+	Most = 12,
+	Mostest = 456,
+	Mostestest = 6545656 
+}
 
 struct SmallTestObjectDto
 {
@@ -8,4 +18,34 @@ struct SmallTestObjectDto
 	1: string Name;
 	3: decimal PayPerHour;
 	4: string Position;
+}
+
+struct LargeTestObjectDto
+{
+	0: int32 RInt;
+	1: string RString;
+	2: decimal RDecimal;
+	3: double RDouble;
+	4: int32 RInt2;
+	5: string RString2;
+	6: decimal RDecimal2;
+	7: TestEnum REnum = More;
+	8: vector<TestEnum> REnumCollection;
+	9: vector<TestEnum> REnumList;
+	10: guid RGuid;
+	11: SmallTestObjectDto TestObject2;
+	12: SmallTestObjectDto TestObject3;
+	13: vector<double> RList;
+	14: vector<string> RList2;
+	15: vector<int32> RCollection;
+	16: vector<bool> RCollection2;
+	17: vector<SmallTestObjectDto> RTestObject2List;
+	18: vector<vector<SmallTestObjectDto>> CrazySmallTestObjects;
+	19: vector<SmallTestObjectDto> RTestObject2Collection;
+	20: dateTime RDateTime;
+	21: vector<int16> LazyShorts;
+	22: vector<vector<vector<bool>>> CrazyBools;
+	23: vector<string> Strings;
+	24: vector<SmallTestObjectDto> RTestObject2Array;
+	25: double RDouble2;
 }

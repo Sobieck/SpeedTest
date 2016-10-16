@@ -68,8 +68,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="LargeSerializerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SmallSerializers\SmallNewtonSoftWrapperSerializerTests.cs" />
+    <Compile Include="SmallSerializerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SpeedTest\SpeedTest.csproj">

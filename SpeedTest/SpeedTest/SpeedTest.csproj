@@ -89,6 +89,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LargeDeserializers\LargeDeserializerBase.cs" />
+    <Compile Include="LargeDeserializers\LargeNewtonSoftWrapperDeserializer.cs" />
+    <Compile Include="LargeSerializers\LargeBondSerializer.cs" />
+    <Compile Include="LargeSerializers\LargeNewtonSoftWrapperSerializer.cs" />
+    <Compile Include="LargeSerializers\LargeSerializerBase.cs" />
     <Compile Include="MdResultsWriter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="SmallDeserializers\SmallBondDeserializer.cs" />
@@ -107,6 +112,7 @@
     <Compile Include="TestObjects\SmallTestObject.cs" />
     <Compile Include="TestObjects\TestObjectWithConstructor.cs" />
     <BondCodegen Include="Schemas\schema.bond" />
+    <Compile Include="Utilities\Converters.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
