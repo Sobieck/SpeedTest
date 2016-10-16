@@ -8,10 +8,10 @@ namespace SpeedTest
         static UniformTestObjects()
         {
             SmallObject = RandomValue.Object<SmallTestObject>();
-            LargeObject = RandomValue.Object<TestObject>();
+            LargeObject = RandomValue.Object<LargeTestObject>();
         }
 
-        public static TestObject LargeObject { get; private set; }
+        public static LargeTestObject LargeObject { get; private set; }
         public static SmallTestObject SmallObject { get; private set; }
     }
 }
