@@ -43,5 +43,16 @@ namespace SpeedTest.UnitTests.SmallSerializers
 
             result.ShouldBeEquivalentTo(UniformTestObjects.SmallObject);
         }
+
+        [TestMethod]
+        public void BondShouldWorkAtSerialization()
+        {
+            var result = new SmallBondSerializer().TestableAct();
+            result.Should().BeOfType<string>();
+
+            var expect = UniformTestObjects.SmallObject;
+            var deserialized = new SmallBondDeserializer().TestableAct();
+            deserialized.ShouldBeEquivalentTo(expect);            
+        }
     }
 }

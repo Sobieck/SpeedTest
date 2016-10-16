@@ -1,5 +1,4 @@
-﻿using System;
-using SpeedTest.TestObjects;
+﻿using SpeedTest.TestObjects;
 using Newtonsoft.Json;
 using System.IO;
 

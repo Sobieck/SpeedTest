@@ -1,0 +1,11 @@
+﻿namespace SpeedTest
+
+using decimal = blob;
+
+struct SmallTestObjectDto
+{
+	0: int32 EmployeeNumber;
+	1: string Name;
+	3: decimal PayPerHour;
+	4: string Position;
+}
