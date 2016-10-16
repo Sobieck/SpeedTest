@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
 
-namespace SpeedTest.SmallNewtonSoftWrapper
+namespace SpeedTest.SmallSerializers
 {
     public class SmallNewtonSoftWrapperSerializer : SmallObjectSerializerBase
     {
         public override string TestableAct()
         {
-            throw new NotImplementedException();
+            return JsonConvert.SerializeObject(UniformTestObjects.SmallObject);
         }
     }
 }

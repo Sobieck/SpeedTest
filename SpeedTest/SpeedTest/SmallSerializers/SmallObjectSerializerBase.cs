@@ -1,7 +1,7 @@
 ﻿using SnippetSpeed;
 using SpeedTest.TestObjects;
 
-namespace SpeedTest
+namespace SpeedTest.SmallSerializers
 {
     public abstract class SmallObjectSerializerBase : TestableSnippetSpeedBase<string>
     {
